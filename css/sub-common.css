@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+/******************************
+            COMMON
+******************************/
+body{line-height: 1.6;}
+
+
+/******************************
+              MAIN
+******************************/
+/* -------------------- MAIN COMMON -------------------- */
+.sub-sec{padding: 110px 0;}
+.sub-sec-header{
+    margin-bottom: 110px;
+    text-align: center;
+}
+.sub-sec-header::before{content: "";
+    display: block;
+    width: 30px; height: 1px;
+    margin: 0 auto 10px auto;
+    background-color: #000;
+}
+.sub-sec-header .sub-sec-eng{
+    margin-bottom: 15px;
+    font-weight: 600; font-size: 1.5rem; color: #333;
+}
+.sub-sec-header .sub-sec-tit{
+    font: 400 5.2rem / 1.6 'PuradakGentleGothicR', Roboto, "돋움", dotum, AppleGothic, sans-serif; letter-spacing: -1.5px; color: #111;
+    transition: all .3s;
+}
+.article{padding: 100px 0;}
+.contents-txt{transition: all .3s;}
+.contents-txt .contents-tit{
+    margin-bottom: 30px;
+    font: 400 4.4rem / 1.6 'PuradakGentleGothicR', Roboto, "돋움", dotum, AppleGothic, sans-serif; letter-spacing: -1.5px; color: #333;
+    transition: all .3s;
+}
+.contents-txt .contents-tit em{color: #bc955c;}
+.contents-txt .contents-sub-tit{
+    margin-bottom: 35px;
+    font-weight: 700; font-size: 2.6rem; letter-spacing: -2px; color: #999;
+    transition: all .3s;
+}
+.contents-txt .contents-desc{transition: all .3s;}
+.contents-txt .contents-desc span{display: block;}
+.menu .inner{max-width: 1280px;}
+
+
+/* -------------------- VISUAL -------------------- */
+.visual{
+    display: flex; justify-content: center; align-items: center;
+    width: 100%; height: 400px;
+    padding-top: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all .3s;
+}
+.visual .visual-tit{font: 400 4.8rem / 1.6 'PuradakGentleGothicR', Roboto, "돋움", dotum, AppleGothic, sans-serif; text-align: center; letter-spacing: -1.5px; color: #fff;}
+
+
+/* -------------------- LNB -------------------- */
+.lnb{
+    display: flex; justify-content: center;
+    background-color: #f1f1f1;
+}
+.lnb .lnb-list{display: flex; flex-wrap: wrap; justify-content: center;}
+.lnb .lnb-list li{display: flex; align-items: center;}
+.lnb .lnb-list li + li::before{content: "";
+    display: block;
+    width: 2px; height: 16px;
+    background-color: #bbb;
+}
+.lnb .lnb-list li a{
+    display: block;
+    padding: 0 30px;
+    font-weight: 500; font-size: 1.7rem; line-height: 70px; text-align: center; color: #777;
+    transition: all .3s;
+}
+.lnb .lnb-list li a span{position: relative;}
+.lnb .lnb-list li a span::after{content: "";
+    display: block;
+    width: 100%; height: 2px;
+    background-color: #bc955c;
+    position: absolute; left: 0; bottom: -5px;
+    transform: scale(0); transform-origin: center;
+    transition: all .3s;
+}
+.lnb .lnb-list li.on a{font-weight: 700; color: #bc955c;}
+.lnb .lnb-list li.on a span::after{transform: scale(1);}
+.lnb .lnb-list li:hover a{color: #bc955c;}
+.lnb .lnb-list li:hover a span::after{transform: scale(1);}
+
+
+/******************************
+      max-width: 1280px;
+******************************/
+@media all and ( max-width: 1280px ){
+    /******************************
+                COMMON
+    ******************************/
+    body{font-size: 1.7rem;}
+
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MAIN COMMON -------------------- */
+    .sub-sec{padding: 100px 0;}
+    .sub-sec-header{margin-bottom: 100px;}
+    .sub-sec-header .sub-sec-tit{font-size: 5rem;}
+    .article{padding: 90px 0;}
+    .contents-txt .contents-tit{font-size: 4.2rem;}
+
+    /* -------------------- VISUAL -------------------- */
+    .visual{height: 350px;}
+    .visual .visual-tit{font-size: 4.6rem;}
+
+    /* -------------------- LNB -------------------- */
+    .lnb .lnb-list li a{
+        padding: 0 25px;
+        line-height: 65px;
+    }
+}
+
+
+/******************************
+      max-width: 1024px;
+******************************/
+@media all and ( max-width: 1024px ){
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MAIN COMMON -------------------- */
+    .sub-sec{padding: 95px 0;}
+    .sub-sec-header{margin-bottom: 95px;}
+    .sub-sec-header .sub-sec-eng{margin-bottom: 10px;}
+    .sub-sec-header .sub-sec-tit{font-size: 4.8rem;}
+    .article{padding: 85px 0;}
+    .contents-txt .contents-tit{
+        margin-bottom: 25px;
+        font-size: 4rem;
+    }
+    .contents-txt .contents-sub-tit{
+        font-size: 2.4rem;
+        margin-bottom: 30px;
+    }
+
+    /* -------------------- VISUAL -------------------- */
+    .visual .visual-tit{font-size: 4.4rem;}
+
+    /* -------------------- LNB -------------------- */
+    .lnb .lnb-list li a{font-size: 1.6rem; line-height: 60px;}
+}
+
+
+/******************************
+      max-width: 768px;
+******************************/
+@media all and ( max-width: 768px ){
+    /******************************
+                COMMON
+    ******************************/
+    body{font-size: 1.6rem;}
+
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MAIN COMMON -------------------- */
+    .sub-sec{padding: 90px 0;}
+    .sub-sec-header{margin-bottom: 90px;}
+    .sub-sec-header .sub-sec-eng{font-size: 1.4rem;}
+    .sub-sec-header .sub-sec-tit{font-size: 4.4rem;}
+    .article{padding: 80px 0;}
+    .contents-txt .contents-tit{font-size: 3.8rem;}
+
+    /* -------------------- VISUAL -------------------- */
+    .visual{
+        height: 300px;
+        padding-top: 80px;
+    }
+    .visual .visual-tit{font-size: 4rem;}
+
+    /* -------------------- LNB -------------------- */
+    .lnb .lnb-list li a{
+        padding: 0 20px;
+        font-size: 1.5rem; line-height: 55px;
+    }
+}
+
+
+/******************************
+      max-width: 640px;
+******************************/
+@media all and ( max-width: 640px ){
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MAIN COMMON -------------------- */
+    .sub-sec{padding: 80px 0;}
+    .sub-sec-header{margin-bottom: 80px;}
+    .sub-sec-header .sub-sec-tit{font-size: 4rem;}
+    .article{padding: 70px 0;}
+    .contents-txt .contents-tit{font-size: 3.4rem;}
+    .contents-txt .contents-sub-tit{font-size: 2.2rem;}
+
+    /* -------------------- VISUAL -------------------- */
+    .visual .visual-tit{font-size: 3.6rem;}
+
+    /* -------------------- LNB -------------------- */
+    .lnb .lnb-list li a{padding: 0 15px;}
+    .lnb .lnb-list li a{line-height: 50px;}
+}
+
+
+/******************************
+      max-width: 480px;
+******************************/
+@media all and ( max-width: 480px ){
+    /******************************
+                COMMON
+    ******************************/
+    body{font-size: 1.5rem;}
+
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MAIN COMMON -------------------- */
+    .sub-sec{padding: 70px 0;}
+    .sub-sec-header{margin-bottom: 70px;}
+    .sub-sec-header .sub-sec-tit{font-size: 3.6rem;}
+    .article{padding: 60px 0;}
+    .contents-txt .contents-tit{font-size: 3rem;}
+    .contents-txt .contents-sub-tit{font-size: 2rem;}
+
+    /* -------------------- VISUAL -------------------- */
+    .visual{
+        height: 250px;
+        padding-top: 60px;
+    }
+    .visual .visual-tit{font-size: 3.2rem;}
+
+    /* -------------------- LNB -------------------- */
+    .lnb .lnb-list li a{padding: 0 10px;}
+}

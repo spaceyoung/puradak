@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+/******************************
+              MAIN
+******************************/
+/* -------------------- VISUAL -------------------- */
+.visual{
+    background-image: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ), url(../img/sub02-visual.png);
+}
+
+/* -------------------- MENU -------------------- */
+.menu-list{display: flex; flex-wrap: wrap; gap: 20px;}
+.menu-item{
+    width: calc( ( 100% - 60px ) / 4 );
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .3s;
+}
+.menu-item .menu-content{
+    padding: 3%;
+    position: relative;
+}
+.menu-item .menu-img{
+    margin-bottom: 3px;
+    position: relative;
+    transition: all .3s;
+}
+.menu-item .menu-img::after{content: "";
+    display: block;
+    padding-bottom: 85%;
+}
+.menu-item .menu-img img{
+    width: 100%; height: 100%;
+    position: absolute; left: 0; top: 0;
+    object-fit: cover;
+    transition: all .3s;
+}
+.menu-item .menu-txt{margin-bottom: 15px;}
+.menu-item .menu-tit{
+    margin-bottom: 3px;
+    font-weight: 700; font-size: 2.4rem; color: #333;
+    transition: all .3s;
+}
+.menu-item .menu-eng{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    transition: all .3s;
+}
+.menu-item .menu-option{
+    display: flex; justify-content: center; gap: 15px;
+    transition: all .3s;
+}
+.menu-item .menu-option li{
+    display: flex; justify-content: center; align-items: center;
+    width: 50px; height: 50px;
+    border-radius: 100%;
+    font-size: 1.6rem; color: #555;
+    background-color: #f1f1f1;
+}
+.menu-item .menu-spicy{position: absolute; right: 5%; top: 4%;}
+.menu-item .menu-spicy img{height: 30px;}
+.menu-item .menu-detail{
+    display: flex; flex-direction: column;
+    width: 100%; height: 100%;
+    padding: 10%;
+    text-align: left; color: #fff;
+    background-color: rgba(0, 0, 0, .85);
+    position: absolute; left: 0; top: 0;
+    transition: all .3s;
+}
+.menu-item .menu-detail.hide{
+    margin: 0;
+    background-color: transparent;
+}
+.menu-item .menu-detail .menu-detail-tit{
+    margin-bottom: 0;
+    font-size: 2.4rem;
+    font-weight: 600; color: #fff;
+}
+.menu-item .menu-detail .menu-detail-eng{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    color: #ddd;
+}
+.menu-item .menu-detail .menu-detail-price{
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.menu-item .menu-detail .menu-detail-desc{
+    margin-bottom: auto;
+    font-size: 1.5rem; color: #ddd;
+    transition: all .3s;
+}
+.menu-item .menu-detail .menu-detail-allergy{
+    font-size: 1.4rem; color: #ddd;
+    transition: all .3s;
+}
+.menu-item .menu-detail .menu-detail-allergy::before{content: "";
+    display: block;
+    width: 100%; height: 1px;
+    margin-bottom: 7px;
+    background-color: #999;
+}
+.menu-item .menu-detail .menu-detail-close{
+    all: unset;
+    width: 30px; height: 30px;
+    position: absolute; right: 5%; top: 5%;
+}
+.menu-item .menu-detail .menu-detail-close span{font-size: 3rem;}
+.menu-item:hover{border-color: #bc955c;}
+.menu-item:hover .menu-img img{animation: bounce .4s;}
+.menu-item.on{border-color: #bc955c;}
+.menu-item.on .menu-tit,
+.menu-item.on .menu-eng,
+.menu-item.on .menu-option{opacity: 0;}
+
+@keyframes bounce{
+    33%{transform: rotate(5deg);}
+    66%{transform: rotate(-5deg);}
+}
+
+
+/******************************
+      max-width: 1280px;
+******************************/
+@media all and ( max-width: 1280px ){
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MENU -------------------- */
+    .menu-list{gap: 15px;}
+    .menu-item{width: calc( ( 100% - 30px ) / 3 );}
+}
+
+
+/******************************
+      max-width: 1024px;
+******************************/
+@media all and ( max-width: 1024px ){
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MENU -------------------- */
+    .menu-list{gap: 10px;}
+    .menu-item{width: calc( ( 100% - 20px ) / 3 );}
+    .menu-item .menu-tit{font-size: 2.2rem;}
+    .menu-item .menu-eng{font-size: 1.3rem;}
+    .menu-item .menu-option{gap: 15px;}
+    .menu-item .menu-option li{
+        width: 45px; height: 45px;
+        font-size: 1.4rem;
+    }
+    .menu-item .menu-spicy img{height: 25px;}
+    .menu-item .menu-detail .menu-detail-tit{font-size: 2rem;}
+    .menu-item .menu-detail .menu-detail-eng{
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+    .menu-item .menu-detail .menu-detail-price{margin-bottom: 15px;}
+    .menu-item .menu-detail .menu-detail-desc{font-size: 1.4rem;}
+    .menu-item .menu-detail .menu-detail-allergy{font-size: 1.2rem;}
+    .menu-item .menu-detail .menu-detail-allergy::before{margin-bottom: 5px;}
+}
+
+
+/******************************
+      max-width: 768px;
+******************************/
+@media all and ( max-width: 768px ){
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MENU -------------------- */
+    .menu-list{gap: 15px;}
+    .menu-item{width: calc( ( 100% - 15px ) / 2 );}
+    .menu-item .menu-tit{font-size: 2.4rem;}
+    .menu-item .menu-eng{font-size: 1.4rem;}
+    .menu-item .menu-detail .menu-detail-tit{font-size: 2.2rem;}
+    .menu-item .menu-detail .menu-detail-eng{
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+    }
+    .menu-item .menu-detail .menu-detail-price{
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+    .menu-item .menu-detail .menu-detail-desc{font-size: 1.5rem;}
+    .menu-item .menu-detail .menu-detail-allergy{font-size: 1.4rem;}
+    .menu-item .menu-detail .menu-detail-allergy::before{margin-bottom: 7px;}
+}
+
+
+/******************************
+      max-width: 640px;
+******************************/
+@media all and ( max-width: 640px ){
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MENU -------------------- */
+    .menu-list{gap: 10px;}
+    .menu-item{width: calc( ( 100% - 10px ) / 2 );}
+    .menu-item .menu-tit{font-size: 2rem;}
+    .menu-item .menu-eng{font-size: 1.2rem;}
+    .menu-item .menu-option{gap: 10px;}
+    .menu-item .menu-option li{
+        width: 40px; height: 40px;
+        font-size: 1.3rem;
+    }
+    .menu-item .menu-spicy img{height: 20px;}
+    .menu-item .menu-detail .menu-detail-tit{font-size: 1.8rem;}
+    .menu-item .menu-detail .menu-detail-eng{
+        margin-bottom: 12px;
+        font-size: 1.2rem;
+    }
+    .menu-item .menu-detail .menu-detail-price{
+        margin-bottom: 12px;
+        font-size: 1.5rem;
+    }
+    .menu-item .menu-detail .menu-detail-desc{font-size: 1.4rem;}
+    .menu-item .menu-detail .menu-detail-allergy{font-size: 1.2rem;}
+    .menu-item .menu-detail .menu-detail-allergy::before{margin-bottom: 5px;}
+    .menu-item .menu-detail .menu-detail-close{width: 26px; height: 26px;}
+    .menu-item .menu-detail .menu-detail-close span{font-size: 2.6rem;}
+}
+
+
+/******************************
+      max-width: 480px;
+******************************/
+@media all and ( max-width: 480px ){
+   /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MENU -------------------- */
+    .menu-list{gap: 15px 0;}
+    .menu-item{width: 100%;}
+    .menu-item .menu-tit{font-size: 2.4rem;}
+    .menu-item .menu-eng{font-size: 1.4rem;}
+    .menu-item .menu-option{gap: 15px;}
+    .menu-item .menu-option li{
+        width: 50px; height: 50px;
+        font-size: 1.6rem;
+    }
+    .menu-item .menu-spicy img{height: 30px;}
+    .menu-item .menu-detail .menu-detail-tit{font-size: 2.4rem;}
+    .menu-item .menu-detail .menu-detail-eng{
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+    }
+    .menu-item .menu-detail .menu-detail-price{
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+    .menu-item .menu-detail .menu-detail-desc{font-size: 1.5rem;}
+    .menu-item .menu-detail .menu-detail-allergy{font-size: 1.4rem;}
+    .menu-item .menu-detail .menu-detail-allergy::before{margin-bottom: 7px;}
+    .menu-item .menu-detail .menu-detail-close{width: 30px; height: 30px;}
+    .menu-item .menu-detail .menu-detail-close span{font-size: 3rem;}
+}

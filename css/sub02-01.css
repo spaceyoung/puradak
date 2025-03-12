@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/******************************
+              MAIN
+******************************/
+/* -------------------- MAIN COMMON -------------------- */
+.menu .inner{max-width: 1280px;}
+.menu .sub-sec-header{margin-bottom: 55px;}
+.menu-tab{
+    display: flex; flex-wrap: wrap; justify-content: center;
+    margin-bottom: 100px;
+}
+.menu-tab .menu-tab-btn{
+    display: flex; align-items: center;
+    cursor: pointer;
+}
+.menu-tab .menu-tab-btn + .menu-tab-btn::before{content: "";
+    display: block;
+    width: 2px; height: 16px;
+    background-color: #bbb;
+}
+.menu-tab .menu-tab-btn button{
+    padding: 0 40px;
+    line-height: 60px;
+}
+.menu-tab .menu-tab-btn button span{position: relative;}
+.menu-tab .menu-tab-btn button span::after{content: "";
+    display: block;
+    width: 100%; height: 2px;
+    background-color: #bc955c;
+    position: absolute; left: 0; bottom: -5px;
+    transform: scale(0); transform-origin: center;
+    transition: all .3s;
+}
+.menu-tab .menu-tab-btn button.on{font-weight: 600; color: #bc955c;}
+.menu-tab .menu-tab-btn button.on span::after{transform: scale(1);}
+.menu-tab .menu-tab-btn:hover button{color: #bc955c;}
+.menu-tab .menu-tab-btn:hover button span::after{transform: scale(1);}
+
+
+/******************************
+      max-width: 1280px;
+******************************/
+@media all and ( max-width: 1280px ){
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MAIN COMMON -------------------- */
+    .menu .sub-sec-header{margin-bottom: 50px;}
+    .menu-tab{margin-bottom: 90px;}
+    .menu-tab .menu-tab-btn button{
+        padding: 0 35px;
+        line-height: 55px;
+    }
+}
+
+
+/******************************
+      max-width: 1024px;
+******************************/
+@media all and ( max-width: 1024px ){
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MAIN COMMON -------------------- */
+    .menu-tab .menu-tab-btn button{line-height: 50px;}
+}
+
+
+/******************************
+      max-width: 768px;
+******************************/
+@media all and ( max-width: 768px ){
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MAIN COMMON -------------------- */
+    .menu .sub-sec-header{margin-bottom: 45px;}
+    .menu-tab{margin-bottom: 80px;}
+    .menu-tab .menu-tab-btn button{
+        padding: 0 25px;
+        line-height: 45px;
+    }
+}
+
+
+
+/******************************
+      max-width: 640px;
+******************************/
+@media all and ( max-width: 640px ){
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MAIN COMMON -------------------- */
+    .menu .sub-sec-header{margin-bottom: 40px;}
+    .menu-tab{margin-bottom: 70px;}
+    .menu-tab .menu-tab-btn button{padding: 0 20px;}
+}
+
+
+/******************************
+      max-width: 480px;
+******************************/
+@media all and ( max-width: 480px ){
+    /******************************
+                  MAIN
+    ******************************/
+    /* -------------------- MAIN COMMON -------------------- */
+    .menu .sub-sec-header{margin-bottom: 35px;}
+    .menu-tab{margin-bottom: 60px;}
+    .menu-tab .menu-tab-btn button{padding: 0 15px;}
+}
